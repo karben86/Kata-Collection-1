@@ -10,8 +10,10 @@ function sentenceToCamelCase(sentence, isUpper) {
 };
 
 function camelToEnglish(sentence) {
+
+  // Capitalise the first character, make all uppercase letters in the remaining string lowercase
+  // and add a full stop at the end.
   return sentence[0].toUpperCase() + sentence.slice(1).replace(/[A-Z]/g, char => " " + char.toLowerCase()) + ".";
 }
 
-module.exports = sentenceToCamelCase;
-module.exports = camelToEnglish;
+module.exports = { sentenceToCamelCase, camelToEnglish };
