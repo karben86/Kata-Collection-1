@@ -1,0 +1,23 @@
+{
+  "name": "fun-morning-katas",
+  "version": "1.0.0",
+  "description": "## Running Order",
+  "main": "calculate-divisors.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karben86/fun-morning-katas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karben86/fun-morning-katas/issues"
+  },
+  "homepage": "https://github.com/karben86/fun-morning-katas#readme",
+  "devDependencies": {
+    "jest": "^26.5.0"
+  }
+}
