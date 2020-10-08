@@ -10,16 +10,18 @@ function foldString(sentence) {
 // This function folds each individual word
 function foldWord(word) {
 
-  // It takes each word apart and transforms 3 sections before returning their concatenation:
+  let middlePos = word.length / 2;
+
+  // The function takes each word apart and transforms 3 sections before returning their concatenation:
   // The first section goes from the first character to the middle character for even words
   // and to the character before the middle character for odd words. This section is reversed.
-  return word.slice(0, Math.floor(-word.length / 2)).split("").reverse().join("")
+  return word.slice(0, Math.floor(-middlePos)).split("").reverse().join("")
 
     // the second section extracts the middle character for odd words only which it leaves in place
-    + word.slice(Math.floor(word.length / 2), Math.ceil(word.length / 2))
+    + word.slice(Math.floor(middlePos), Math.ceil(middlePos))
 
     // The third section takes the rest of the word and this section is again reversed
-    + word.slice(Math.ceil(word.length / 2)).split("").reverse().join("");
+    + word.slice(Math.ceil(middlePos)).split("").reverse().join("");
 };
 
 module.exports = foldString

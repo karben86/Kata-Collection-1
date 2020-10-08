@@ -16,6 +16,6 @@ test('foldString("Northcoders") should return "htroNcsredo"', () => {
     expect(foldString("Northcoders")).toBe("htroNcsredo");
 });
 
-test('foldString("javascript is cool") should return "savajtpirc is oclo"', () => {
+test('foldString("javascript is cool") should return "savajtpirc si oclo"', () => {
     expect(foldString("javascript is cool")).toBe("savajtpirc is oclo");
 });
