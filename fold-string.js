@@ -1,6 +1,25 @@
 // Please do not change the name of this function
-function foldString (str) {
-  // Your code here
+
+// This function takes a sentence and splits it into words
+// It then calls the foldWord function to fold each individual word
+// before joining all the words back together and returning the folded sentence.
+function foldString(sentence) {
+  return sentence.split(" ").map(str => foldWord(str)).join(" ")
+}
+
+// This function folds each individual word
+function foldWord(word) {
+
+  // It takes each word apart and transforms 3 sections before returning their concatenation:
+  // The first section goes from the first character to the middle character for even words
+  // and to the character before the middle character for odd words. This section is reversed.
+  return word.slice(0, Math.floor(-word.length / 2)).split("").reverse().join("")
+
+    // the second section extracts the middle character for odd words only which it leaves in place
+    + word.slice(Math.floor(word.length / 2), Math.ceil(word.length / 2))
+
+    // The third section takes the rest of the word and this section is again reversed
+    + word.slice(Math.ceil(word.length / 2)).split("").reverse().join("");
 };
 
 module.exports = foldString
