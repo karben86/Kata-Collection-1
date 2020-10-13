@@ -21,7 +21,7 @@ test('getTweetData("I am #coding with @northcoders I love #coding and @northcode
 });
 
 test('getTweetData("My awesome tweet about #coding to @northcoders includes some url called http://www.someurl.com") should return "{ tags: [\'#coding\'], mentions: [\'@northcoders\'], tagCount: 1, mentionCount: 1, length: 94, urlCount: 1  }"', () => {
-    expect(getTweetData("My awesome tweet about #coding to @northcoders includes some url called http://www.someurl.com")).toEqual({ tags: ['#coding'], mentions: ['@northcoders'], tagCount: 1, mentionCount: 1, length: 94, urlCount: 1, email: 0 });
+    expect(getTweetData("My awesome tweet about #coding to @northcoders includes some url called http://www.someurl.com")).toEqual({ tags: ['#coding'], mentions: ['@northcoders'], tagCount: 1, mentionCount: 1, length: 116, urlCount: 1, email: 0 });
 });
 
 test('getTweetData("I am #coding with @northcoders and my email address is example@fake.com") should return { tags: [\'#coding\'], mentions: [\'@northcoders\'], tagCount: 1, mentionCount: 1, length: 71, urlCount: 0, email: 0  }"', () => {

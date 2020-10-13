@@ -2,7 +2,7 @@
 function getTweetData(tweet) {
 
   // The whole tweet length is taken into account.
-  const length = tweet.length + (tweet.match(/http:\/\/\w+(?= |$)/g) || [""]).map(string => string.length).reduce((total, urlLength) => total + urlLength);
+  const length = tweet.length + (tweet.match(/http:\/\/.*?(?= |$)/g) || [""]).map(string => string.length).reduce((total, urlLength) => total + urlLength);
 
   // Mentions are defined by any word that starts with @. These are all counted and subsequently printed by the below regex,
   // except for cases where the same exact mention occurs multiple times in which case only one instance is taken into account.
