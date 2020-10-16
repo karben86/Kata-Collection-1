@@ -6,3 +6,4 @@ function counterSpy(names) {
 };
 
 module.exports = counterSpy;
+
